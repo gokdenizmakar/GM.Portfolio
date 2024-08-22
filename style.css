@@ -87,6 +87,16 @@ section{
     justify-content: center;
     margin-top: 3rem;
 }
+.home-content p a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+.home-content p a:visited{
+  color: var(--text-color);
+}
+.home-content p a:hover{
+  color: var(--main-color);
+}
 span{
     color: var(--main-color);
 }
