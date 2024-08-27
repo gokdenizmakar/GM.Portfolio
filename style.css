@@ -114,9 +114,7 @@ span{
     margin-top: 1.5rem;
     line-height: 1;
 }
-.home-img{
-    border-radius: 50%;
-}
+
 .home-img img{
     position: relative;
     top: 3rem;
@@ -381,19 +379,19 @@ span{
     
     .services-container {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
-      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center; 
       gap: 2.5rem;
     }
     
     .services-box {
-      display: flex;
       background-color: var(--main-color);
-      height: 300px;
+      height: 355px;
+      /* height: 300px; */
       border-radius: 3rem;
       border: 5px solid transparent;
-      transition: 0.4s ease-in-out;
       cursor: pointer;
+      transition: 0.4s ease-in-out;
     }
     
     .services-box:hover {
@@ -405,26 +403,28 @@ span{
     
     .services-box .services-info {
       display: flex;
-      flex-direction: column;
-      text-align: left;
-      max-height: 200px;
-      justify-content: left;
-      align-items: baseline;
-      padding: 5rem 5rem;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 5rem 5rem;
     }
     
     .services-info h4 {
-      font-size: 2.8rem;
+      font-size: 3rem; 
+      /* font-size: 2rem; */
       font-weight: 800;
-      line-height: 2;
+      line-height: 2; 
+      /* line-height: 1; */
     }
     
     .services-info p {
       font-size: 1.6rem;
-      font-weight: 600;
-      max-height: 100px;
-      line-height: 1.7;
-      margin: auto;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.7;
+    margin: auto;
     }
 
   .skills {
@@ -649,7 +649,7 @@ span{
       position: absolute;
       top: 100%;
       right: 0;
-      width: 50%;
+      width: 100%;
       padding: 1rem 3%;
       background: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(20px);
@@ -683,9 +683,40 @@ span{
       margin: 0 auto;
     }
     .home-img img{
-      width: 56vmax;
+      width: 38vmax;
+      height: 38vmax;
     }
     .services.h2{
       margin-bottom: 3rem;
     }
+    .services .services-box{
+      display: block;
+    }
+    .services p{
+      padding-bottom: 2px;
+      display: block;
+      clear: both;
+    }
+    .services-container{
+      grid-template-columns: repeat(1, 1fr);
   }
+  }
+  @media (max-width:550px) {
+    html{
+      font-size: 45%;
+    }
+    .home-img img{
+      width: 50vw;
+      height: 50vw;
+    }
+  }
+    @media (max-width:366px) {
+      html{
+        font-size: 35%;
+      }
+  }
+  @media (max-width:248px) {
+    html{
+      font-size: 30%;
+    }
+}
